@@ -303,39 +303,6 @@ namespace _2048
             count.Font = new Font("Times New Roman", 15, FontStyle.Bold);
             this.Controls.Add(count);
 
-            //right = new Button();
-            //right.Text = "R";
-            //right.BackColor = Color.LightGreen;
-            //right.Size = new Size(30, 400);
-            //right.Location = new Point(460, 70);
-            //this.Controls.Add(right);
-            //right.Click += Right_Click;
-
-            //left = new Button();
-            //left.Text = "L";
-            //left.BackColor = Color.LightGreen;
-            //left.Size = new Size(30, 400);
-            //left.Location = new Point(30, 70);
-            //this.Controls.Add(left);
-            //left.Click += Left_Click;
-
-            //up = new Button();
-            //up.Text = "Up";
-            //up.BackColor = Color.LightGreen;
-            //up.Size = new Size(400, 30);
-            //up.Location = new Point(60, 40);
-            //this.Controls.Add(up);
-            //up.Click += Up_Click;
-
-            //down = new Button();
-            //down.Text = "down";
-            //down.BackColor = Color.LightGreen;
-            //down.Size = new Size(400, 30);
-            //down.Location = new Point(60, 470);
-            //this.Controls.Add(down);
-            //down.Click += Down_Click;
-            #endregion
-
             //Creation of the first two numbers
             #region
             SetToCell();
@@ -344,35 +311,6 @@ namespace _2048
 
             #endregion
         }
-
-        //Action if direction buttons click
-        #region
-        private void Down_Click(object sender, EventArgs e)
-        {
-            if (ToDown())
-                SetToCell();
-        }
-
-        private void Up_Click(object sender, EventArgs e)
-        {
-            if (ToUp())
-                SetToCell();
-        }
-
-        private void Left_Click(object sender, EventArgs e)
-        {
-            if (ToLeft())
-                SetToCell();
-        }
-
-        private void Right_Click(object sender, EventArgs e)
-        {
-            if (ToRight())
-                SetToCell();
-        }
-        #endregion
-
-
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
@@ -397,6 +335,8 @@ namespace _2048
                 SetToCell();
             }
         }
+
+
         List<Button> buttonList = new List<Button>();
         Button btn; //Buttons of the cells
         Button right;
@@ -405,6 +345,6 @@ namespace _2048
         Button down;
         Button count;
 
-
+        #endregion
     }
 }
