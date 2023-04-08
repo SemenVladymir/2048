@@ -339,10 +339,6 @@ namespace _2048
 
         List<Button> buttonList = new List<Button>();
         Button btn; //Buttons of the cells
-        Button right;
-        Button left;
-        Button up;
-        Button down;
         Button count;
 
         #endregion
