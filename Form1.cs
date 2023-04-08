@@ -31,7 +31,7 @@ namespace _2048
             do
             {
                 cell = rnd.Next(0, 15);
-            } while (!buttonList[cell].Text.Equals("1"));
+            } while (!(buttonList[cell].Text.Length==0));
             int number = Get2or4Number();
             buttonList[cell].Text = Convert.ToString(number);
             buttonList[cell].Font = new Font("Times New Roman", 15, FontStyle.Bold);
@@ -50,9 +50,9 @@ namespace _2048
                     for (int row = 0; row < 3; row++)
                     {
                         //Thread.Sleep(500);
-                        if (!buttonList[line * 4 + row].Text.Equals("1"))
+                        if (!(buttonList[line * 4 + row].Text.Length==0))
                         {
-                            if (!buttonList[line * 4 + row + 1].Text.Equals("1"))
+                            if (!(buttonList[line * 4 + row + 1].Text.Length==0))
                             {
                                 if (buttonList[line * 4 + row].Text.Equals(buttonList[line * 4 + row + 1].Text))
                                 {
@@ -63,7 +63,7 @@ namespace _2048
                                     buttonList[line * 4 + row + 1].ForeColor = Color.Black;
                                     buttonList[line * 4 + row + 1].BackColor = Color.FromArgb(100, 150, number / 10 < 256 ? number / 10 : 255, number < 256 ? number : 255);
                                     buttonList[line * 4 + row + 1].Text = $"{number * -1}";
-                                    buttonList[line * 4 + row].Text = "1";
+                                    buttonList[line * 4 + row].Text = "";
                                     buttonList[line * 4 + row].ForeColor = Color.Aquamarine;
                                     buttonList[line * 4 + row].BackColor = Color.Aquamarine;
                                     tmp = true;
@@ -75,7 +75,7 @@ namespace _2048
                                 buttonList[line * 4 + row + 1].Font = buttonList[line * 4 + row].Font;
                                 buttonList[line * 4 + row + 1].ForeColor = buttonList[line * 4 + row].ForeColor;
                                 buttonList[line * 4 + row + 1].BackColor = buttonList[line * 4 + row].BackColor;
-                                buttonList[line * 4 + row].Text = "1";
+                                buttonList[line * 4 + row].Text = "";
                                 buttonList[line * 4 + row].ForeColor = Color.Aquamarine;
                                 buttonList[line * 4 + row].BackColor = Color.Aquamarine;
                                 tmp = true;
@@ -101,9 +101,9 @@ namespace _2048
                 {
                     for (int row = 3; row > 0; row--)
                     {
-                        if (!buttonList[line * 4 + row].Text.Equals("1"))
+                        if (!(buttonList[line * 4 + row].Text.Length == 0))
                         {
-                            if (!buttonList[line * 4 + row - 1].Text.Equals("1"))
+                            if (!(buttonList[line * 4 + row - 1].Text.Length == 0))
                             {
                                 if (buttonList[line * 4 + row].Text.Equals(buttonList[line * 4 + row - 1].Text))
                                 {
@@ -114,7 +114,7 @@ namespace _2048
                                     buttonList[line * 4 + row - 1].ForeColor = Color.Black;
                                     buttonList[line * 4 + row - 1].Text = $"{number * -1}";
                                     buttonList[line * 4 + row - 1].BackColor = Color.FromArgb(100, 150, number / 10 < 256 ? number / 10 : 255, number < 256 ? number : 255);
-                                    buttonList[line * 4 + row].Text = "1";
+                                    buttonList[line * 4 + row].Text = "";
                                     buttonList[line * 4 + row].ForeColor = Color.Aquamarine;
                                     buttonList[line * 4 + row].BackColor = Color.Aquamarine;
                                     tmp = true;
@@ -126,7 +126,7 @@ namespace _2048
                                 buttonList[line * 4 + row - 1].Font = buttonList[line * 4 + row].Font;
                                 buttonList[line * 4 + row - 1].ForeColor = buttonList[line * 4 + row].ForeColor;
                                 buttonList[line * 4 + row - 1].BackColor = buttonList[line * 4 + row].BackColor;
-                                buttonList[line * 4 + row].Text = "1";
+                                buttonList[line * 4 + row].Text = "";
                                 buttonList[line * 4 + row].ForeColor = Color.Aquamarine;
                                 buttonList[line * 4 + row].BackColor = Color.Aquamarine;
                                 tmp = true;
@@ -152,9 +152,9 @@ namespace _2048
                 {
                     for (int line = 3; line > 0; line--)
                     {
-                        if (!buttonList[line * 4 + row].Text.Equals("1"))
+                        if (!(buttonList[line * 4 + row].Text.Length == 0))
                         {
-                            if (!buttonList[line * 4 + row - 4].Text.Equals("1"))
+                            if (!(buttonList[line * 4 + row - 4].Text.Length == 0))
                             {
                                 if (buttonList[line * 4 + row].Text.Equals(buttonList[line * 4 + row - 4].Text))
                                 {
@@ -165,7 +165,7 @@ namespace _2048
                                     buttonList[line * 4 + row - 4].ForeColor = Color.Black;
                                     buttonList[line * 4 + row - 4].BackColor = Color.FromArgb(100, 150, number / 10 < 256 ? number / 10 : 255, number < 256 ? number : 255);
                                     buttonList[line * 4 + row - 4].Text = $"{number * -1}";
-                                    buttonList[line * 4 + row].Text = "1";
+                                    buttonList[line * 4 + row].Text = "";
                                     buttonList[line * 4 + row].ForeColor = Color.Aquamarine;
                                     buttonList[line * 4 + row].BackColor = Color.Aquamarine;
                                     tmp = true;
@@ -177,7 +177,7 @@ namespace _2048
                                 buttonList[line * 4 + row - 4].Font = buttonList[line * 4 + row].Font;
                                 buttonList[line * 4 + row - 4].ForeColor = buttonList[line * 4 + row].ForeColor;
                                 buttonList[line * 4 + row - 4].BackColor = buttonList[line * 4 + row].BackColor;
-                                buttonList[line * 4 + row].Text = "1";
+                                buttonList[line * 4 + row].Text = "";
                                 buttonList[line * 4 + row].ForeColor = Color.Aquamarine;
                                 buttonList[line * 4 + row].BackColor = Color.Aquamarine;
                                 tmp = true;
@@ -203,9 +203,9 @@ namespace _2048
                 {
                     for (int line = 0; line < 3; line++)
                     {
-                        if (!buttonList[line * 4 + row].Text.Equals("1"))
+                        if (!(buttonList[line * 4 + row].Text.Length == 0))
                         {
-                            if (!buttonList[line * 4 + row + 4].Text.Equals("1"))
+                            if (!(buttonList[line * 4 + row + 4].Text.Length == 0))
                             {
                                 if (buttonList[line * 4 + row].Text.Equals(buttonList[line * 4 + row + 4].Text))
                                 {
@@ -216,7 +216,7 @@ namespace _2048
                                     buttonList[line * 4 + row + 4].ForeColor = Color.Black;
                                     buttonList[line * 4 + row + 4].BackColor = Color.FromArgb(100, 150, number / 10 < 256 ? number / 10 : 255, number < 256 ? number : 255);
                                     buttonList[line * 4 + row + 4].Text = $"{number * -1}";
-                                    buttonList[line * 4 + row].Text = "1";
+                                    buttonList[line * 4 + row].Text = "";
                                     buttonList[line * 4 + row].ForeColor = Color.Aquamarine;
                                     buttonList[line * 4 + row].BackColor = Color.Aquamarine;
                                     tmp = true;
@@ -228,7 +228,7 @@ namespace _2048
                                 buttonList[line * 4 + row + 4].Font = buttonList[line * 4 + row].Font;
                                 buttonList[line * 4 + row + 4].ForeColor = buttonList[line * 4 + row].ForeColor;
                                 buttonList[line * 4 + row + 4].BackColor = buttonList[line * 4 + row].BackColor;
-                                buttonList[line * 4 + row].Text = "1";
+                                buttonList[line * 4 + row].Text = "";
                                 buttonList[line * 4 + row].ForeColor = Color.Aquamarine;
                                 buttonList[line * 4 + row].BackColor = Color.Aquamarine;
                                 tmp = true;
@@ -272,11 +272,12 @@ namespace _2048
             do
             {
                 btn = new Button();
-                btn.Text = "1";
+                btn.Text = "";
                 btn.ForeColor = Color.Aquamarine;
                 btn.BackColor = Color.Aquamarine;
+                btn.KeyDown += Form1_KeyDown;
                 btn.Size = new Size(size, size);
-                //btn.Enabled = false;
+                btn.Enabled = false;
                 btn.Location = new Point(position * size - 40, line * size - 30);
                 buttonList.Add(btn);
                 this.Controls.Add(btn);
@@ -302,37 +303,37 @@ namespace _2048
             count.Font = new Font("Times New Roman", 15, FontStyle.Bold);
             this.Controls.Add(count);
 
-            right = new Button();
-            right.Text = "R";
-            right.BackColor = Color.LightGreen;
-            right.Size = new Size(30, 400);
-            right.Location = new Point(460, 70);
-            this.Controls.Add(right);
-            right.Click += Right_Click;
+            //right = new Button();
+            //right.Text = "R";
+            //right.BackColor = Color.LightGreen;
+            //right.Size = new Size(30, 400);
+            //right.Location = new Point(460, 70);
+            //this.Controls.Add(right);
+            //right.Click += Right_Click;
 
-            left = new Button();
-            left.Text = "L";
-            left.BackColor = Color.LightGreen;
-            left.Size = new Size(30, 400);
-            left.Location = new Point(30, 70);
-            this.Controls.Add(left);
-            left.Click += Left_Click;
+            //left = new Button();
+            //left.Text = "L";
+            //left.BackColor = Color.LightGreen;
+            //left.Size = new Size(30, 400);
+            //left.Location = new Point(30, 70);
+            //this.Controls.Add(left);
+            //left.Click += Left_Click;
 
-            up = new Button();
-            up.Text = "Up";
-            up.BackColor = Color.LightGreen;
-            up.Size = new Size(400, 30);
-            up.Location = new Point(60, 40);
-            this.Controls.Add(up);
-            up.Click += Up_Click;
+            //up = new Button();
+            //up.Text = "Up";
+            //up.BackColor = Color.LightGreen;
+            //up.Size = new Size(400, 30);
+            //up.Location = new Point(60, 40);
+            //this.Controls.Add(up);
+            //up.Click += Up_Click;
 
-            down = new Button();
-            down.Text = "down";
-            down.BackColor = Color.LightGreen;
-            down.Size = new Size(400, 30);
-            down.Location = new Point(60, 470);
-            this.Controls.Add(down);
-            down.Click += Down_Click;
+            //down = new Button();
+            //down.Text = "down";
+            //down.BackColor = Color.LightGreen;
+            //down.Size = new Size(400, 30);
+            //down.Location = new Point(60, 470);
+            //this.Controls.Add(down);
+            //down.Click += Down_Click;
             #endregion
 
             //Creation of the first two numbers
